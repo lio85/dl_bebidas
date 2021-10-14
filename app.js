@@ -11,7 +11,7 @@ app.set ('view engine', 'ejs');
 
 app.get('/', (req,res) => { 
     //res.sendFile(path.resolve(__dirname, 'views/index.html'))
-    res.res.send('index');
+    res.send('index');
 });
 
 app.use('/', categoryRoutes);
