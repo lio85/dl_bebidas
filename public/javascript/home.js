@@ -1,21 +1,23 @@
-fetch("https://dl-bebidas-dashboard.herokuapp.com/api/allproducts")
+fetch("http://dl-bebidas-dashboard.herokuapp.com/api/allproducts")
+//fetch("http://localhost:3070/api/allproducts")
     .then(function(response){
         return response.json();
     })
     .then(function(data_decode){
-        var listProducts=data_decode.listProducts;
+        const listProducts=data_decode.listProducts;
 
-        var general_container= document.querySelector('#general_container');
-        var fragment= document.createDocumentFragment();
+        const general_container= document.querySelector('#general_container');
+        const fragment= document.createDocumentFragment();
         
         for (product of listProducts){
-            var product_container= document.createElement("article");
+            const product_container= document.createElement("article");
             product_container.classList.add("product_container");
-                var nameProduct= document.createElement("span");
+                const nameProduct= document.createElement("span");
                 nameProduct.textContent= `${product.name} ${product.presentation}`
-                var imageProduct= document.createElement("img");
+                const imageProduct= document.createElement("img");
                 imageProduct.setAttribute("src",product.image);
-                var priceProduct= document.createElement("span");
+                const priceProduct= document.createElement("span");
+                priceProduct.classList.add('price')
                 priceProduct.textContent= `$${product.price}`
                 
                 product_container.appendChild(nameProduct)   

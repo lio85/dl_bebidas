@@ -1,0 +1,69 @@
+cursor
+lsit-style
+display: flex
+text-decoration
+:hover
+position: absolute y relative
+pseudoclases (por ejemplo checked en los checkboxes)
+
+862*360
+
+1- Lienzo -> Lienzo transparente = activado
+2- Cambiar el tamaño de la imagen en funcion del lienzo
+3- Seleccion magica
+4- Siguiente
+5- Retoques
+6- Listo
+7- Lienzo
+8- Mostrar Lienzo= desactivado
+9- Menu -> Guardar como -> Imagen
+10- (Arriba a la derecha) -> Guardar como tipo -> PNG (imagen)
+10- Ajustar tamaño
+10- Transparencia -> Activada
+
+--------------
+
+PREPROS
+
+1- abrimos prepros (lo descargue segun indicaciones de Dorian - ver video 18)
+
+2- "tiramos" adentro de prepros la carpeta del proyecto que querramos usar con prepros.
+
+3- Observaremos que se abrirá el proyecto dentro de prepros.
+
+4- Hacemos click en la hoja de estilos que creamos y tenemos linkeada al HTML, y veremos que se despliega un menu a la derecha.
+
+5- Darle check a Process Automatically.
+
+6- Verificar que la opción "Prefix CSS" esté marcada.
+
+7- Luego de esto se nos creara un archivo prepros.config en la raiz del proyecto, que no debemos tocar ni modificar (es la configuracion de prepros)
+
+8- Tambien comprobaremos que prepros genera una hoja de estilos nueva en la misma ubicacion que nuestra hoja de estilos original con el nombre styles-dist.css (es el codigo de styles.css pocesado por prepros, donde se van a agregar los prefijos y todas esas cosas).
+
+9- Nosotros vamos a seguir trabajando en styles.css, pero en el html, en lugar de styles.css, vamos a linkear styles-dist.css
+
+10- vamos a https://autoprefixer.github.io/ a buscar el siguiente codigo, que luego debemos pegar en nuestra hoja de estilos style.css:
+
+.example {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}
+
+*** Verificar si el copy-paste desde aca funciona!!
+
+11- En prepros destildamos Minify CSS (menu de la derecha), y luego click en el boton Process File (menu de la derecha en prepros, abajo de todo)
+
+12 - Siempre adentro de prepros, vamos al menu hamburguesa (esquina superior derecha) y le damos click a Project Settings.
+
+13- Se despliega una ventana con un menu a la izquiera: Clickeamos en CSS Tools, y luego en Autoprefixer.
+
+14 - Borramos todas las opciones que nos aparezcan en inputs debajo de "Target Browsers" y le vamos a decir hacia que navegadores queremos apuntar escribiendo simplemente "defaults" (sin las comillas) y luego presionamos Enter
+
+15 - Cerramos esta ultima ventana (X en la esquina superior derecha) y luego volvemos a hacer click en el boton Process File (menu de la derecha en prepros, abajo de todo)
+
+** Prepros nos da la posibilidad de levantar un servidor de desarrollo, como Live Server (Dorian lo explica al final del video #18 nivel basico)
+
+    Hay que clickear es Server (icono arriba a la dereche en la vista principal de prepros) y luego click en Open Preview, y veremos como se abre una nueva pestaña en el navegador (como con Live Server)
