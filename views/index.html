@@ -6,29 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="public/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon-16x16.png">
+    <link rel="manifest" href="public/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- favicons -->
 
     <!-- fonts.google.com -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- fonts.google.com -->
     
     <!-- fontawesome -->
@@ -36,14 +34,14 @@
     <!-- fontawesome -->
 
     <!-- normalize: hoja de estilos que configura estilos por defecto, para que las vistas se vean de manera uniforme independientemente del navegador en la que se estén renderizando  -->
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="public/css/normalize.css">
     <!-- normalize: hoja de estilos que configura estilos por defecto, para que las vistas se vean de manera uniforme independientemente del navegador en la que se estén renderizando  -->
 
     <!-- prepos -->
     <!-- <link rel="stylesheet" href="public/css/home-dist.css"> -->
     <!-- prepos -->
 
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="public/css/home.css">
     
 
     <title>DL_Bebidas</title>
@@ -52,7 +50,7 @@
     <header class="top_header">
         <span class="logo_container">
             <a href="index.html">
-                <img src="/images/logo_sin_fondo.png" alt="logo">
+                <img src="public/images/logo_sin_fondo.png" alt="logo">
             </a>
         </span>
         <span>
@@ -75,12 +73,38 @@
         </span>   
     </header>
     <main>
-        <section id="general_container" class="general_container"></section>
+        <section id="general_container" class="general_container">
+        <!--<article class="product_container">
+                <span>Ruttini 750ml</span>
+                <img src="https://dl-bebidas-dashboard.herokuapp.com/images/products/1634186342937.jpeg" alt="johnie_walker_red_label_750cm3">
+                <span>$5000</span>
+            </article> -->
+        </section>
+
     </main>
-    <footer>
+    <footer class="footer">
+        <span class="logo_footer">
+            <a href="index.html">
+                <img src="public/images/logo_sin_fondo.png" alt="logo">
+            </a>
+        </span>
+            <ul class="ul" >
+                <li class="ul__li">DL_bebidas</li>
+                <li class="ul__li">Lacarra 108 - Floresta - Capital Federal</li>
+                <li class="ul__li">Lunes a Sábados de 11:30 a 20hs</li>
+                <li class="ul__li"><a href="https://www.instagram.com/dl_bebida/" target="__blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        
+        <span class="logo_footer">
+            <a href="index.html">
+                <img src="public/images/logo_sin_fondo.png" alt="logo">
+            </a>
+        </span>
+
 
     </footer>
     
-    <script src="/javascript/home.js"></script>
+    <script src="public/javascript/home.js"></script>
 </body>
 </html>
