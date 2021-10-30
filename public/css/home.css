@@ -62,15 +62,39 @@ body {
     font-size: 30px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------------------------------- main ------------------------------------------------- */
 
-.general_container {
+/* ESTA ERA LA POSTA HASTA AHORA */
+/* .general_container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 50px 0;
-    
-    /* background: yellow; */
-    /* width: 90%; */
     margin: 120px 0 80px 0;
     padding: 0 50px;
        
@@ -78,13 +102,11 @@ body {
 
 .product_container {
     display: block;
-    /* border: red 1px solid; */
     margin-left: 10px;
     text-align: center;
     width: 200px;
     height: 280px;
     border-radius: 50px 50px 200px 200px;
-    /* background-color: #996515; */
     background-image: url('/images/tabla.jpeg');
     padding: 10px 0;
     box-shadow: -10px 10px 10px;
@@ -113,8 +135,8 @@ body {
     width: 100px;
     margin-top: 10px;
     border-radius: 20px;
-}
-
+} */
+/* ESTA ERA LA POSTA HASTA AHORA */
 
 /* .general_container {
     margin: 30px;
@@ -147,7 +169,102 @@ body {
 } */
 
 
+
+.slider {
+    width: 90%;
+    height: 500px;
+    margin: 200px auto 200px auto;
+    background-color: salmon;
+    display: grid;
+    grid-template-columns: 1px 1fr 1px;
+    align-items: center;
+}
+.slider__container {
+    width: 90%;
+    height: 400px;
+    background-color: lightgreen;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    /* align-items: center; */
+}
+
+.slider__card {
+    background-color: lightgrey;
+    padding-top: 25px ;
+
+
+}
+.slider__card__title {
+    text-align: center;
+
+}
+.slider__card__img {
+    display: block;
+    width: 60%; 
+    margin: auto;
+}
+.slider__card__price {
+    
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* main  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* footer */
 .footer {
