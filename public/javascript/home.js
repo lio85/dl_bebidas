@@ -5,31 +5,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/allproducts")
     })
     .then(function(data_decode){
         const products=data_decode.listProducts;
-
-        /* const general_container= document.querySelector('#general_container');
-        const fragment= document.createDocumentFragment();
-        
-        for (product of listProducts){
-            const product_container= document.createElement("article");
-            product_container.classList.add("product_container");
-                const nameProduct= document.createElement("span");
-                nameProduct.textContent= `${product.name} ${product.presentation}`
-                const imageProduct= document.createElement("img");
-                imageProduct.setAttribute("src",product.image);
-                const priceProduct= document.createElement("span");
-                priceProduct.classList.add('price')
-                priceProduct.textContent= `$${product.price}`
-                
-                product_container.appendChild(nameProduct)   
-                product_container.appendChild(imageProduct) 
-                product_container.appendChild(priceProduct)  
-                
-                fragment.appendChild(product_container);
-            
-        }
-
-        general_container.appendChild(fragment) */
-
+        console.log(products);
         const left_arrow= document.querySelector('.left_arrow')
         const right_arrow= document.querySelector('.right_arrow')
         const sliderCards= [...document.querySelectorAll('.slider__card')];
