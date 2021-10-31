@@ -88,27 +88,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                             sliderAperitivos[3]++;
                             sliderAperitivos[4]++;
                         }
-                        
-                        /* sliderCards[0].children[0].innerText= `${products[sliderCurrentProducts[0]].name} ${products[sliderCurrentProducts[0]].presentation}`
-                        sliderCards[0].children[1].attributes[0].value= `${products[sliderCurrentProducts[0]].image}`
-                        sliderCards[0].children[2].innerText= `$${products[sliderCurrentProducts[0]].price}`
-            
-                        sliderCards[1].children[0].innerText= `${products[sliderCurrentProducts[1]].name} ${products[sliderCurrentProducts[1]].presentation}`
-                        sliderCards[1].children[1].attributes[0].value= `${products[sliderCurrentProducts[1]].image}`
-                        sliderCards[1].children[2].innerText= `$${products[sliderCurrentProducts[1]].price}`
-            
-                        sliderCards[2].children[0].innerText= `${products[sliderCurrentProducts[2]].name} ${products[sliderCurrentProducts[2]].presentation}`
-                        sliderCards[2].children[1].attributes[0].value= `${products[sliderCurrentProducts[2]].image}`
-                        sliderCards[2].children[2].innerText= `$${products[sliderCurrentProducts[2]].price}`
-            
-                        sliderCards[3].children[0].innerText= `${products[sliderCurrentProducts[3]].name} ${products[sliderCurrentProducts[3]].presentation}`
-                        sliderCards[3].children[1].attributes[0].value= `${products[sliderCurrentProducts[3]].image}`
-                        sliderCards[3].children[2].innerText= `$${products[sliderCurrentProducts[3]].price}`
-            
-                        sliderCards[4].children[0].innerText= `${products[sliderCurrentProducts[4]].name} ${products[sliderCurrentProducts[4]].presentation}`
-                        sliderCards[4].children[1].attributes[0].value= `${products[sliderCurrentProducts[4]].image}`
-                        sliderCards[4].children[2].innerText= `$${products[sliderCurrentProducts[4]].price}` */
-                        console.log(sliderAperitivos);
+                        setChanges(0, sliderAperitivos, aperitivos);
                         break;
                         
                     case 'ra2':
@@ -149,7 +129,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                             sliderCervezas[3]++;
                             sliderCervezas[4]++;
                         }
-                        console.log(sliderCervezas);
+                        setChanges(1, sliderCervezas, cervezas);
                         break;
                         
                     case 'ra3':
@@ -190,6 +170,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                             sliderGaseosas[3]++;
                             sliderGaseosas[4]++;
                         }
+                        setChanges(2, sliderGaseosas, gaseosas);
                         break;
                     case 'ra4':
                         if (sliderVinos[4] == vinos.listItems.length-1){
@@ -229,6 +210,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                             sliderVinos[3]++;
                             sliderVinos[4]++;
                         }
+                        setChanges(3, sliderVinos, vinos);
                         break;
                     case 'ra5':
                         if (sliderWhiskeys[4] == whiskeys.listItems.length-1){
@@ -268,6 +250,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                             sliderWhiskeys[3]++;
                             sliderWhiskeys[4]++;
                         }
+                        setChanges(4, sliderWhiskeys, whiskeys);
                         break;
                 }
                 
@@ -294,6 +277,40 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                 }
             })
         }
+
+        function setChanges (card__container, cards, category) {
+            //for (let i=0; i< sliderContainers.length; i++){
+                for(let i=0; i< sliderContainers[card__container].children.length; i++){
+                    switch (i){
+                        case 0:
+                            sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[0]].name} ${category.listItems[cards[0]].presentation}`
+                            sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[0]].image}`
+                            sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[0]].price}`
+                            break;
+                        case 1:
+                            sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[1]].name} ${category.listItems[cards[1]].presentation}`
+                            sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[1]].image}`
+                            sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[1]].price}`
+                            break;
+                        case 2:
+                            sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[2]].name} ${category.listItems[cards[2]].presentation}`
+                            sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[2]].image}`
+                            sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[2]].price}`
+                            break;
+                        case 3:
+                            sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[3]].name} ${category.listItems[cards[3]].presentation}`
+                            sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[3]].image}`
+                            sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[3]].price}`
+                            break;
+                        case 4:
+                            sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[4]].name} ${category.listItems[cards[4]].presentation}`
+                            sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[4]].image}`
+                            sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[4]].price}`
+                            break;
+                    }
+                };
+            //}
+        } 
     })
     .catch(function(e){
         alert("Error!");
