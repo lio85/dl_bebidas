@@ -1,161 +1,193 @@
-fetch("http://dl-bebidas-dashboard.herokuapp.com/api/allproducts")
-//fetch("http://localhost:3070/api/allproducts")
+fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
     .then(function(response){
         return response.json();
     })
     .then(function(data_decode){
-        const products=data_decode.listProducts;
-        console.log(products);
-        const left_arrow= document.querySelector('.left_arrow')
-        const right_arrow= document.querySelector('.right_arrow')
-        const sliderCards= [...document.querySelectorAll('.slider__card')];
 
-        let sliderCurrentProducts= [0,1,2,3,4]
+        const {aperitivos, cervezas, gaseosas, vinos, whiskeys}= data_decode
+        const left_arrows= document.querySelectorAll('.left_arrow')
+        const right_arrows= document.querySelectorAll('.right_arrow')
+        const sliderContainers= [...document.querySelectorAll('.slider__container')];
 
-        sliderCards[0].children[0].innerText= `${products[0].name} ${products[0].presentation}`
-        sliderCards[0].children[1].attributes[0].value= `${products[0].image}`
-        sliderCards[0].children[2].innerText= `$${products[0].price}`
+        let sliderAperitivos= [0,1,2,3,4];
+        let sliderCervezas= [0,1,2,3,4];
+        let sliderGaseosas= [0,1,2,3,4];
+        let sliderVinos= [0,1,2,3,4];
+        let sliderWhiskeys= [0,1,2,3,4];
 
-        sliderCards[1].children[0].innerText= `${products[1].name} ${products[1].presentation}`
-        sliderCards[1].children[1].attributes[0].value= `${products[1].image}`
-        sliderCards[1].children[2].innerText= `$${products[1].price}`
+        
+        setChanges(0, sliderAperitivos, aperitivos);
+        setChanges(1, sliderCervezas, cervezas);
+        setChanges(2, sliderGaseosas, gaseosas);
+        setChanges(3, sliderVinos, vinos);
+        setChanges(4, sliderWhiskeys, whiskeys);
 
-        sliderCards[2].children[0].innerText= `${products[2].name} ${products[2].presentation}`
-        sliderCards[2].children[1].attributes[0].value= `${products[2].image}`
-        sliderCards[2].children[2].innerText= `$${products[2].price}`
+        for (let i=0; i< right_arrows.length; i++){
+            right_arrows[i].addEventListener('click', (e)=> {
+                switch(e.target.id){
+                    case 'ra1':
+                        validationsRightArrow(sliderAperitivos, aperitivos);
+                        setChanges(0, sliderAperitivos, aperitivos);
+                        break;
+                    case 'ra2':
+                        validationsRightArrow(sliderCervezas, cervezas);
+                        setChanges(1, sliderCervezas, cervezas);
+                        break;
+                    case 'ra3':
+                        validationsRightArrow(sliderGaseosas, gaseosas);
+                        setChanges(2, sliderGaseosas, gaseosas);
+                        break;
+                    case 'ra4':
+                        validationsRightArrow(sliderVinos, vinos);
+                        setChanges(3, sliderVinos, vinos);
+                        break;
+                    case 'ra5':
+                        validationsRightArrow(sliderWhiskeys, whiskeys);
+                        setChanges(4, sliderWhiskeys, whiskeys);
+                        break;
+                }
+            })
+        }
 
-        sliderCards[3].children[0].innerText= `${products[3].name} ${products[3].presentation}`
-        sliderCards[3].children[1].attributes[0].value= `${products[3].image}`
-        sliderCards[3].children[2].innerText= `$${products[3].price}`
+        for (let i=0; i< left_arrows.length; i++){
+            left_arrows[i].addEventListener('click', (e)=> {
+                switch(e.target.id){
+                    case 'la1':
+                        validationsLeftArrow(sliderAperitivos, aperitivos);
+                        setChanges(0, sliderAperitivos, aperitivos);
+                        break;
+                    case 'la2':
+                        validationsLeftArrow(sliderCervezas, cervezas);
+                        setChanges(1, sliderCervezas, cervezas);
+                        break;
+                    case 'la3':
+                        validationsLeftArrow(sliderGaseosas, gaseosas);
+                        setChanges(2, sliderGaseosas, gaseosas);
+                        break;
+                    case 'la4':
+                        validationsLeftArrow(sliderVinos, vinos);
+                        setChanges(3, sliderVinos, vinos);
+                        break;
+                    case 'la5':
+                        validationsLeftArrow(sliderWhiskeys, whiskeys);
+                        setChanges(4, sliderWhiskeys, whiskeys);
+                        break;
+                }
+            })
+        }
 
-        sliderCards[4].children[0].innerText= `${products[4].name} ${products[4].presentation}`
-        sliderCards[4].children[1].attributes[0].value= `${products[4].image}`
-        sliderCards[4].children[2].innerText= `$${products[4].price}`
-
-        left_arrow.addEventListener('click', () => {
-            if (sliderCurrentProducts[0] == 0){
-                sliderCurrentProducts[0]= products.length-1;
-                sliderCurrentProducts[1]--;
-                sliderCurrentProducts[2]--;
-                sliderCurrentProducts[3]--;
-                sliderCurrentProducts[4]--;
-            } else if (sliderCurrentProducts[1] == 0){
-                sliderCurrentProducts[0]--;
-                sliderCurrentProducts[1]= products.length-1;
-                sliderCurrentProducts[2]--;
-                sliderCurrentProducts[3]--;
-                sliderCurrentProducts[4]--;
-            } else if (sliderCurrentProducts[2] == 0){
-                sliderCurrentProducts[0]--;
-                sliderCurrentProducts[1]--;
-                sliderCurrentProducts[2]= products.length-1;
-                sliderCurrentProducts[3]--;
-                sliderCurrentProducts[4]--;
-            } else if (sliderCurrentProducts[3] == 0){
-                sliderCurrentProducts[0]--;
-                sliderCurrentProducts[1]--;
-                sliderCurrentProducts[2]--;
-                sliderCurrentProducts[3]= products.length-1;
-                sliderCurrentProducts[4]--;
-            } else if (sliderCurrentProducts[4] == 0){
-                sliderCurrentProducts[0]--;
-                sliderCurrentProducts[1]--;
-                sliderCurrentProducts[2]--;
-                sliderCurrentProducts[3]--;
-                sliderCurrentProducts[4]= products.length-1;
+        function validationsLeftArrow (array, category) {
+            if (array[0] == 0){
+                array[0]= category.listItems.length-1;
+                array[1]--;
+                array[2]--;
+                array[3]--;
+                array[4]--;
+            } else if (array[1] == 0){
+                array[0]--;
+                array[1]= category.listItems.length-1;
+                array[2]--;
+                array[3]--;
+                array[4]--;
+            } else if (array[2] == 0){
+                array[0]--;
+                array[1]--;
+                array[2]= category.listItems.length-1;
+                array[3]--;
+                array[4]--;
+            } else if (array[3] == 0){
+                array[0]--;
+                array[1]--;
+                array[2]--;
+                array[3]= category.listItems.length-1;
+                array[4]--;
+            } else if (array[4] == 0){
+                array[0]--;
+                array[1]--;
+                array[2]--;
+                array[3]--;
+                array[4]= category.listItems.length-1;
             } else {
-                sliderCurrentProducts[0]--;
-                sliderCurrentProducts[1]--;
-                sliderCurrentProducts[2]--;
-                sliderCurrentProducts[3]--;
-                sliderCurrentProducts[4]--;
+                array[0]--;
+                array[1]--;
+                array[2]--;
+                array[3]--;
+                array[4]--;
             }
-            sliderCards[0].children[0].innerText= `${products[sliderCurrentProducts[0]].name} ${products[sliderCurrentProducts[0]].presentation}`
-            sliderCards[0].children[1].attributes[0].value= `${products[sliderCurrentProducts[0]].image}`
-            sliderCards[0].children[2].innerText= `$${products[sliderCurrentProducts[0]].price}`
+        }
 
-            sliderCards[1].children[0].innerText= `${products[sliderCurrentProducts[1]].name} ${products[sliderCurrentProducts[1]].presentation}`
-            sliderCards[1].children[1].attributes[0].value= `${products[sliderCurrentProducts[1]].image}`
-            sliderCards[1].children[2].innerText= `$${products[sliderCurrentProducts[1]].price}`
-
-            sliderCards[2].children[0].innerText= `${products[sliderCurrentProducts[2]].name} ${products[sliderCurrentProducts[2]].presentation}`
-            sliderCards[2].children[1].attributes[0].value= `${products[sliderCurrentProducts[2]].image}`
-            sliderCards[2].children[2].innerText= `$${products[sliderCurrentProducts[2]].price}`
-
-            sliderCards[3].children[0].innerText= `${products[sliderCurrentProducts[3]].name} ${products[sliderCurrentProducts[3]].presentation}`
-            sliderCards[3].children[1].attributes[0].value= `${products[sliderCurrentProducts[3]].image}`
-            sliderCards[3].children[2].innerText= `$${products[sliderCurrentProducts[3]].price}`
-
-            sliderCards[4].children[0].innerText= `${products[sliderCurrentProducts[4]].name} ${products[sliderCurrentProducts[4]].presentation}`
-            sliderCards[4].children[1].attributes[0].value= `${products[sliderCurrentProducts[4]].image}`
-            sliderCards[4].children[2].innerText= `$${products[sliderCurrentProducts[4]].price}`
-        })
-
-        right_arrow.addEventListener('click', () => {
-
-            if (sliderCurrentProducts[4] == products.length-1){
-                sliderCurrentProducts[0]++;
-                sliderCurrentProducts[1]++;
-                sliderCurrentProducts[2]++;
-                sliderCurrentProducts[3]++;
-                sliderCurrentProducts[4]= 0;
-            } else if (sliderCurrentProducts[3] == products.length-1){
-                sliderCurrentProducts[0]++;
-                sliderCurrentProducts[1]++;
-                sliderCurrentProducts[2]++;
-                sliderCurrentProducts[3]= 0;
-                sliderCurrentProducts[4]++;
-            }else if (sliderCurrentProducts[2] == products.length-1){
-                sliderCurrentProducts[0]++;
-                sliderCurrentProducts[1]++;
-                sliderCurrentProducts[2]= 0;
-                sliderCurrentProducts[3]++;
-                sliderCurrentProducts[4]++;
-            } else if (sliderCurrentProducts[1] == products.length-1){
-                sliderCurrentProducts[0]++;
-                sliderCurrentProducts[1]=0;
-                sliderCurrentProducts[2]++;
-                sliderCurrentProducts[3]++;
-                sliderCurrentProducts[4]++;
-            }else if (sliderCurrentProducts[0] == products.length-1){
-                sliderCurrentProducts[0]=0;
-                sliderCurrentProducts[1]++;
-                sliderCurrentProducts[2]++;
-                sliderCurrentProducts[3]++;
-                sliderCurrentProducts[4]++;
+        function validationsRightArrow (array, category) {
+            if (array[4] == category.listItems.length-1){
+                array[0]++;
+                array[1]++;
+                array[2]++;
+                array[3]++;
+                array[4]= 0;
+            } else if (array[3] == category.listItems.length-1){
+                array[0]++;
+                array[1]++;
+                array[2]++;
+                array[3]= 0;
+                array[4]++;
+            }else if (array[2] == category.listItems.length-1){
+                array[0]++;
+                array[1]++;
+                array[2]= 0;
+                array[3]++;
+                array[4]++;
+            } else if (array[1] == category.listItems.length-1){
+                array[0]++;
+                array[1]=0;
+                array[2]++;
+                array[3]++;
+                array[4]++;
+            }else if (array[0] == category.listItems.length-1){
+                array[0]=0;
+                array[1]++;
+                array[2]++;
+                array[3]++;
+                array[4]++;
             } else {
-                sliderCurrentProducts[0]++;
-                sliderCurrentProducts[1]++;
-                sliderCurrentProducts[2]++;
-                sliderCurrentProducts[3]++;
-                sliderCurrentProducts[4]++;
+                array[0]++;
+                array[1]++;
+                array[2]++;
+                array[3]++;
+                array[4]++;
             }
+        }
 
-            sliderCards[0].children[0].innerText= `${products[sliderCurrentProducts[0]].name} ${products[sliderCurrentProducts[0]].presentation}`
-            sliderCards[0].children[1].attributes[0].value= `${products[sliderCurrentProducts[0]].image}`
-            sliderCards[0].children[2].innerText= `$${products[sliderCurrentProducts[0]].price}`
-
-            sliderCards[1].children[0].innerText= `${products[sliderCurrentProducts[1]].name} ${products[sliderCurrentProducts[1]].presentation}`
-            sliderCards[1].children[1].attributes[0].value= `${products[sliderCurrentProducts[1]].image}`
-            sliderCards[1].children[2].innerText= `$${products[sliderCurrentProducts[1]].price}`
-
-            sliderCards[2].children[0].innerText= `${products[sliderCurrentProducts[2]].name} ${products[sliderCurrentProducts[2]].presentation}`
-            sliderCards[2].children[1].attributes[0].value= `${products[sliderCurrentProducts[2]].image}`
-            sliderCards[2].children[2].innerText= `$${products[sliderCurrentProducts[2]].price}`
-
-            sliderCards[3].children[0].innerText= `${products[sliderCurrentProducts[3]].name} ${products[sliderCurrentProducts[3]].presentation}`
-            sliderCards[3].children[1].attributes[0].value= `${products[sliderCurrentProducts[3]].image}`
-            sliderCards[3].children[2].innerText= `$${products[sliderCurrentProducts[3]].price}`
-
-            sliderCards[4].children[0].innerText= `${products[sliderCurrentProducts[4]].name} ${products[sliderCurrentProducts[4]].presentation}`
-            sliderCards[4].children[1].attributes[0].value= `${products[sliderCurrentProducts[4]].image}`
-            sliderCards[4].children[2].innerText= `$${products[sliderCurrentProducts[4]].price}`
-        })
+        function setChanges (card__container, cards, category) {
+            for(let i=0; i< sliderContainers[card__container].children.length; i++){
+                switch (i){
+                    case 0:
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[0]].name} ${category.listItems[cards[0]].presentation}`
+                        sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[0]].image}`
+                        sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[0]].price}`
+                        break;
+                    case 1:
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[1]].name} ${category.listItems[cards[1]].presentation}`
+                        sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[1]].image}`
+                        sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[1]].price}`
+                        break;
+                    case 2:
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[2]].name} ${category.listItems[cards[2]].presentation}`
+                        sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[2]].image}`
+                        sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[2]].price}`
+                        break;
+                    case 3:
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[3]].name} ${category.listItems[cards[3]].presentation}`
+                        sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[3]].image}`
+                        sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[3]].price}`
+                        break;
+                    case 4:
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[4]].name} ${category.listItems[cards[4]].presentation}`
+                        sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[4]].image}`
+                        sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[4]].price}`
+                        break;
+                }
+            };
+        } 
     })
     .catch(function(e){
         alert("Error!");
     })
-
-
-
-    
