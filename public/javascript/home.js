@@ -1,3 +1,21 @@
+const items__nav= document.querySelectorAll('.items__nav');
+
+for (let i=0; i< items__nav.length; i++){
+    items__nav[i].addEventListener('click', (e)=> {
+        //console.log(i);
+        let menu_nav_ul= document.querySelector('.menu_nav_ul');
+        //menu_nav_ul.classList.toggle('fixed');
+        if (i==0 && menu_nav_ul.classList.contains('fixed')){
+            //console.log("la vamos a sacar");
+            menu_nav_ul.classList.remove('fixed');
+        } else if(i!=0 && !menu_nav_ul.classList.contains('fixed')) {
+            //console.log("la vamos a agregar");
+            menu_nav_ul.classList.add('fixed');
+        }
+    });
+};
+
+
 fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
     .then(function(response){
         return response.json();
@@ -160,27 +178,27 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
             for(let i=0; i< sliderContainers[card__container].children.length; i++){
                 switch (i){
                     case 0:
-                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[0]].name} ${category.listItems[cards[0]].presentation}`
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[0]].name}`
                         sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[0]].image}`
                         sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[0]].price}`
                         break;
                     case 1:
-                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[1]].name} ${category.listItems[cards[1]].presentation}`
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[1]].name}`
                         sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[1]].image}`
                         sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[1]].price}`
                         break;
                     case 2:
-                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[2]].name} ${category.listItems[cards[2]].presentation}`
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[2]].name}`
                         sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[2]].image}`
                         sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[2]].price}`
                         break;
                     case 3:
-                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[3]].name} ${category.listItems[cards[3]].presentation}`
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[3]].name}`
                         sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[3]].image}`
                         sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[3]].price}`
                         break;
                     case 4:
-                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[4]].name} ${category.listItems[cards[4]].presentation}`
+                        sliderContainers[card__container].children[i].children[0].innerText= `${category.listItems[cards[4]].name}`
                         sliderContainers[card__container].children[i].children[1].attributes[0].value= `${category.listItems[cards[4]].image}`
                         sliderContainers[card__container].children[i].children[2].innerText= `$${category.listItems[cards[4]].price}`
                         break;
