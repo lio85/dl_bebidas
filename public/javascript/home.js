@@ -1,20 +1,15 @@
 const items__nav= document.querySelectorAll('.items__nav');
-
 for (let i=0; i< items__nav.length; i++){
     items__nav[i].addEventListener('click', (e)=> {
-        //console.log(i);
+        
         let menu_nav_ul= document.querySelector('.menu_nav_ul');
-        //menu_nav_ul.classList.toggle('fixed');
         if (i==0 && menu_nav_ul.classList.contains('fixed')){
-            //console.log("la vamos a sacar");
             menu_nav_ul.classList.remove('fixed');
         } else if(i!=0 && !menu_nav_ul.classList.contains('fixed')) {
-            //console.log("la vamos a agregar");
             menu_nav_ul.classList.add('fixed');
         }
     });
 };
-
 
 fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
     .then(function(response){
