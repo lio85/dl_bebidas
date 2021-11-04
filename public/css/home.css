@@ -191,6 +191,97 @@ hr {
     width: 40px;
 }
 
+@media (max-width: 1500px) {
+
+    /* --------------- HEADER --------------- */
+
+    .top_header {
+        height: 150px;
+    }
+    .back__header {
+        height: 120px;
+    }
+    .top_header .logo_container img {
+        width: 100px;
+        margin-top: 10px;
+    }
+    .menu_nav {
+        position: relative;
+        top: -20px;
+    }
+    .menu_nav_ul li a {
+        font-size: 30px;
+    }
+
+    /* --------------- MAIN ----------- */
+
+    .category {
+        margin: 10px 0 0px 0;
+        padding-bottom: 30px;    
+    }
+    .slider__ubication { 
+        top: -176px;     
+    }
+    .category__title { 
+        font-size: 50px; 
+        height: 15px;
+    }
+    .left_arrow,
+    .right_arrow {
+        width: 5vw;
+    }
+    .slider__container {
+        height: auto;
+    }
+    .slider__card {
+        height: 320px;
+        width: 90%;
+    }
+    .slider__card__title {
+        font-size: 30px;
+        width: 100%;
+    }
+    .slider__card__img {
+        width: 140px;
+        margin-bottom: 0;
+    }
+    .slider__card__price {
+        font-size: 30px;
+    }
+
+    /* ----------------- FOOTER --------------- */
+
+    .footer {
+        height: 280px;
+    }
+    .whatsapp-btn {
+        font-size: 35px;
+        width: 60px;
+        top: 170px; 
+        right: 210px;    
+    }
+}
+
+@media (max-width: 1266px) {
+    
+    .slider__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .slider__card:last-child{
+        display: none;
+    }
+}
+
+@media (max-width: 1013px) {
+    
+    .slider__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card4{
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
 
     .top_header {
