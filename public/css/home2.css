@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Grenze Gotisch', cursive;
+}
+body {
+    background-image: url('/images/fondo.jpeg');
+    background-attachment: fixed;
+    background-size: contain;
+    
+}
+/* HEADER */
+.top_header {
+    width: 100vw;
+    height: 160px;
+    text-align: center;
+    background-color: rgb(224, 64, 64);
+    border-bottom: rgb(41, 37, 37) solid 5px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+.logo_container {
+    margin-left: 20px;
+    display: flex;
+}
+.logo_container a {
+    height: auto;
+    margin: auto 0;
+}
+.top_header .logo_container img {
+    width: 100px;
+}
+
+.burguer_menu {
+    font-size: 40px;
+    margin: 60px 50px 0 0;
+}
+.menu_nav{
+    background-color: rgb(41, 37, 37);
+    padding:10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    position: absolute;
+    right: -500px;
+    transition: all 1s;
+}
+.click_burguer_menu {
+    right: 0;
+    transition: all 0.7s;
+}
+.menu_nav_ul{
+    list-style: none;
+}
+.menu_nav_ul li{
+    margin: 5px 0;
+}
+.menu_nav_ul li a{
+    font-size: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+.back__header {
+    background-color: salmon;
+    height: 160px;
+}
+
+/* MAIN */
+.main {
+    /* background-color: limegreen; */
+    /* border: red 2px solid; */
+    /* height: 50px; */
+    /* margin: 100px 0 100px 0; */
+}
+.category {
+    /* background: yellow; */
+    height: auto;
+    /* padding-bottom: 50px; */
+    margin-top: 50px;
+}
+.category__title {  
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    color: #ebeb4d;
+    text-align: center;
+}
+/* .left_arrow,
+.right_arrow {
+
+} */
+.slider__container {
+    /* background:salmon; */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 500fr 1fr;
+    align-items: center;
+}
+/* .slider {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+} */
+
+
+/* .slider__card {
+    width: 93%;
+    height: 400px;
+    background-image: url('/images/tabla.jpeg');
+    text-align: center;
+    padding: 10px 0;
+    margin-left: 10px;
+    border-radius: 50px 50px 200px 200px;
+    box-shadow: -10px 10px 10px;
+} */
+
+
+.slider__card__title {
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px auto;
+    text-align: center;
+}
+.slider__card__img {
+    width: 180px;
+    margin: 10px 0;
+    border: rgb(41, 37, 37) solid 4px;
+    border-radius: 20px;
+}
+/* .slider__card__price {
+    font-size: 35px;
+    color: #ffffff;
+} */
+.card2,
+.card3,
+.card4,
+.card5 {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+    /* background-color: orange; */
+    border: pink 2px solid;
+    height: 50px;
+
+}
+/* --------------------------------------- MAIN ------------------------------------------------- */
+
+
+/* .main__content {
+    margin: 100px 0 100px 0;
+} */
+/* hr {
+    width: 50%;
+    margin: 0 auto;
+}
+.category {
+    height: auto;
+    padding-bottom: 50px;
+    margin: 50px 0 0px 0;
+}
+.slider__ubication { 
+    position: relative;
+    top: -174px;     
+}
+.category__title {    
+    height: auto;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    padding: 0;
+}
+.slider {
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 500fr 1fr;
+    align-items: center;
+}
+.slider__container {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.slider__card {
+    width: 93%;
+    height: 400px;
+    background-image: url('/images/tabla.jpeg');
+    text-align: center;
+    padding: 10px 0;
+    margin-left: 10px;
+    border-radius: 50px 50px 200px 200px;
+    box-shadow: -10px 10px 10px;
+}
+.slider__card__title {
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px auto;
+}
+.slider__card__img {
+    width: 180px;
+    margin: 10px 0;
+    border: rgb(41, 37, 37) solid 4px;
+    border-radius: 20px;
+}
+.slider__card__price {
+    font-size: 35px;
+    color: #ffffff;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #btn_menu {
+    display: none;
+} */
+
+
+

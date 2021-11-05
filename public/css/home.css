@@ -315,9 +315,9 @@ hr {
     }
 
     /* --------- main -------------- */
-    .main__content {
+    /* .main__content {
         width: 100vh;
-    }
+    } */
     .slider__container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -333,34 +333,59 @@ hr {
     }
 }
 @media (max-width: 500px) {
+    .main__content {
+        /* background-color: salmon; */
+        width: 100vw;
+    }
+    .category {
+        /* background-color: yellowgreen; */
+        width: 100vw;
 
+
+        /* overflow: hidden; */
+    }
+    .category__title{
+        font-size: 45px;
+        margin: 0 0 70px 0;
+    }
     .slider {
-        grid-template-columns: 1fr 1fr 1fr;
+        /* background-color: lightgrey; */
+        width: 100vw;
+        grid-template-columns: 1fr 6fr 1fr;
+
+        /* overflow: hidden; */
     }
     .left_arrow,
     .right_arrow {
-        width: 30vw;
+        width: 15vw;
         margin: auto;
     }
     
     .slider__container {
+        /* background-color: limegreen; */
         grid-template-columns: repeat(1, 1fr);
+        /* width: 70vw; */
+        width: 252px;
+        background-color: salmon;
+        margin-left: auto;
+        margin-right: auto;
+
     }
     .card2{
         display: none;
     }
     .slider__card {
-        width: 500px;
-        height: 800px;
+        width: 200px;
+        height: 360px;
     }
     .slider__card__title {
-        font-size: 70px;
+        font-size: 30px;
     }
     .slider__card__img {
-        width: 360px;
+        width: 80%;
     }
     .slider__card__price {
-        font-size: 70px;
+        font-size: 30px;
     }
 }
 

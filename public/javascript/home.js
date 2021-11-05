@@ -1,4 +1,15 @@
-const items__nav= document.querySelectorAll('.items__nav');
+const burguer_menu= document.querySelector('.burguer_menu');
+burguer_menu.addEventListener('click', ()=>{
+    const menu_nav= document.querySelector('.menu_nav');
+    menu_nav.classList.toggle('click_burguer_menu');
+});
+
+
+
+
+
+
+/* const items__nav= document.querySelectorAll('.items__nav');
 for (let i=0; i< items__nav.length; i++){
     items__nav[i].addEventListener('click', (e)=> {
         
@@ -203,4 +214,4 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
     })
     .catch(function(e){
         alert("Error!");
-    })
+    }) */
