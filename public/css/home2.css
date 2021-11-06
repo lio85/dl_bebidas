@@ -75,14 +75,19 @@ body {
     height: 50px;
     margin: 100px 0 100px 0;
 } */
-/* .category {
+hr {
+    width: 50%;
+    margin: 10px auto;
+}
+.category {
     height: auto;
-    margin-top: 50px;
-} */
+    margin-bottom: 20px;
+}
 .category__title {  
     font-size: 50px;
     color: #ebeb4d;
     text-align: center;
+    margin-bottom: 15px;
 }
 .fa-chevron-left {
     color: #ebeb4d;
@@ -104,7 +109,7 @@ body {
 }
 .slider__card {
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-image: url('/images/tabla.jpeg');
     text-align: center;
     margin: 0 auto;
@@ -120,8 +125,7 @@ body {
     text-align: center;
 }
 .slider__card__img {
-    background-color: turquoise;
-    width: 180px;
+    width: 65%;
     margin: 0 auto;
     border: rgb(41, 37, 37) solid 4px;
     border-radius: 20px;
@@ -159,6 +163,9 @@ body {
     .slider__card {
         width: 252px;
     }
+    .slider__card__img {
+    width: 180px;
+}
 }
 @media (min-width: 720px) {
     .card2 {
