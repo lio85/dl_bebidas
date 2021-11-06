@@ -148,6 +148,8 @@ hr {
     border-top: #ffffff solid 3px;
     display: grid;
     grid-template-columns: 30fr 70fr;
+    position: relative;
+    z-index: 1;
 }
 .left__footer__logos {
     height: 100%;
@@ -193,7 +195,7 @@ hr {
     line-height: 2;
 } */
 
-/* .whatsapp-btn {
+.whatsapp-btn {
     font-size: 55px;
     background-color: #26d367;
     color: #fff;
@@ -203,12 +205,12 @@ hr {
     width: 85px;
     text-align: center;
     position: fixed;
-    top: 248px; 
-    right: 250px;    
-} */
+    bottom: 20px; 
+    right: 20px;   
+}
 /* .ig-btn {
     width: 40px;
-} */
+}
 
 /* MEDIA QUERIES */
 @media (min-width: 360px) {
