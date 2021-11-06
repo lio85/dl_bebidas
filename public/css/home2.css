@@ -14,7 +14,7 @@ body {
 /* HEADER */
 .top_header {
     width: 100vw;
-    height: 160px;
+    height: 120px;
     text-align: center;
     background-color: rgb(224, 64, 64);
     border-bottom: rgb(41, 37, 37) solid 5px;
@@ -37,7 +37,8 @@ body {
 
 .burguer_menu {
     font-size: 40px;
-    margin: 60px 50px 0 0;
+    margin: 40px 50px 0 0;
+    
 }
 .menu_nav{
     background-color: rgb(41, 37, 37);
@@ -64,8 +65,7 @@ body {
     text-decoration: none;
 }
 .back__header {
-    background-color: salmon;
-    height: 160px;
+    height: 120px;
 }
 
 /* MAIN */
@@ -78,6 +78,10 @@ body {
 hr {
     width: 50%;
     margin: 10px auto;
+}
+.slider__ubication { 
+    position: relative;
+    top: -140px;     
 }
 .category {
     height: auto;
