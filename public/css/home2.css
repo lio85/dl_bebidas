@@ -214,6 +214,7 @@ hr {
 }
 
 /* MEDIA QUERIES */
+
 @media (min-width: 360px) {
     .slider__card {
         width: 252px;
@@ -222,6 +223,7 @@ hr {
         width: 180px;
     }
 }
+
 @media (min-width: 720px) {
     .card2 {
         display: block;
@@ -269,6 +271,12 @@ hr {
     .menu_nav_ul li a{
         font-size: 30px;
     }
+    .back__header {
+        height: 162px;
+    }
+    .slider__ubication { 
+        top: -193px;     
+    }
 }
 
 @media (min-width: 1000px) {
@@ -282,6 +290,7 @@ hr {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (min-width: 1250px) {
     .card4 {
         display: block;
@@ -290,6 +299,7 @@ hr {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 @media (min-width: 1550px) {
     .card5 {
         display: block;
