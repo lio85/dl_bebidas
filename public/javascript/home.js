@@ -1,16 +1,17 @@
 const burguer_menu= document.querySelector('.burguer_menu');
+const menu_nav= document.querySelector('.menu_nav');
 burguer_menu.addEventListener('click', ()=>{
-    const menu_nav= document.querySelector('.menu_nav');
     menu_nav.classList.toggle('click_burguer_menu');
 });
 
-
-
-
-
-
-/* const items__nav= document.querySelectorAll('.items__nav');
+const items__nav= document.querySelectorAll('.items__nav');
 for (let i=0; i< items__nav.length; i++){
+    items__nav[i].addEventListener('click', (e)=> {
+        menu_nav.classList.remove('click_burguer_menu');
+    });
+};
+
+/* for (let i=0; i< items__nav.length; i++){
     items__nav[i].addEventListener('click', (e)=> {
         
         let menu_nav_ul= document.querySelector('.menu_nav_ul');
@@ -20,8 +21,9 @@ for (let i=0; i< items__nav.length; i++){
             menu_nav_ul.classList.add('fixed');
         }
     });
-};
+}; */
 
+/*
 fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
     .then(function(response){
         return response.json();

@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Grenze Gotisch', cursive;
+    /* con la linea de abajo hago un scroll con transicion */
+    scroll-behavior: smooth; 
 }
 body {
     background-image: url('/images/fondo.jpeg');
