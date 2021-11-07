@@ -169,10 +169,6 @@ hr {
 .logo__instagram img{
     width: 50px;
 }
-/* .footer .logo_footer a img{
-    width: 100px;
-    margin: 0 0px;
-} */
 .footer ul{
     height: auto;
     margin-top: 20px ;
@@ -189,12 +185,6 @@ hr {
 .ul__li:first-child{
     font-size: 35px;
 }
-/* .ul__li:last-child a{
-    color: #251A12;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 2;
-} */
 
 .whatsapp-btn {
     font-size: 55px;
@@ -209,9 +199,6 @@ hr {
     bottom: 20px; 
     right: 20px;   
 }
-/* .ig-btn {
-    width: 40px;
-}
 
 /* MEDIA QUERIES */
 
@@ -221,6 +208,29 @@ hr {
     }
     .slider__card__img {
         width: 180px;
+    }
+}
+
+@media (min-width: 500px) {
+    .footer {
+        display: block;
+    }
+    .left__footer__logos {
+        display: inline;
+    }
+    .logo__footer {
+        margin: auto;
+        position: absolute;
+        left: 20px;
+        bottom: 70px;
+    }
+    .logo__instagram {
+        position: absolute;
+        right: 20px;
+        bottom: 70px;
+    }
+    .footer ul{
+        margin-top: 30px ;
     }
 }
 
@@ -234,6 +244,32 @@ hr {
     .slider {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .logo__footer {
+        left: 40px;
+        bottom: 60px;
+    }
+    .logo__footer img {
+        width: 110px;   
+    }
+    .logo__instagram {
+        right: 40px;
+        bottom: 80px;
+    }
+    .logo__instagram img{
+        width: 70px;
+    }
+    .footer {
+        height: 230px;
+    }
+    .footer ul{
+        margin-top: 40px;
+    }
+    .footer ul li{
+        font-size: 25px;
+    }
+    .ul__li:first-child{
+        font-size: 40px;
     }
 }
 
