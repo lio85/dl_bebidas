@@ -40,7 +40,6 @@ body {
 .burguer_menu {
     font-size: 40px;
     margin: 40px 50px 0 0;
-    
 }
 .menu_nav{
     background-color: rgb(41, 37, 37);
@@ -220,8 +219,8 @@ hr {
         width: 252px;
     }
     .slider__card__img {
-    width: 180px;
-}
+        width: 180px;
+    }
 }
 @media (min-width: 720px) {
     .card2 {
@@ -235,6 +234,43 @@ hr {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (min-width: 820px) {
+    .top_header {
+        display: block;
+        height: auto;
+    }
+    .logo_container {
+        display: block;
+        margin: 0;
+    }
+    .burguer_menu{
+        display: none;
+    }
+    .menu_nav{
+        position: static;
+        background-color: transparent;
+        transition: all 0s;
+        padding: 0 10px 10px 10px;
+        margin: 0;
+    }
+    .menu_nav_ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu_nav_ul li{
+        padding: 5px 10px;
+        margin: 0;
+        border-radius: 10px;
+    }
+    .menu_nav_ul li:hover {
+        background-color: rgba(0, 0, 0, .75);
+    }
+    .menu_nav_ul li a{
+        font-size: 30px;
+    }
+}
+
 @media (min-width: 1000px) {
     .card3 {
         display: block;
