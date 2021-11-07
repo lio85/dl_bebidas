@@ -234,6 +234,24 @@ hr {
     }
 }
 
+@media (min-width: 600px) {
+    .logo__footer {
+        left: 40px;
+        bottom: 55px;
+    }
+    .logo__footer img {
+        width: 80px;
+    }
+    .logo__instagram {
+        position: absolute;
+        right: 40px;
+        bottom: 70px;
+    }
+    .logo__instagram img {
+        width: 60px;
+    }
+}
+
 @media (min-width: 720px) {
     .card2 {
         display: block;
@@ -244,6 +262,9 @@ hr {
     .slider {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .footer {
+        height: 230px;
     }
     .logo__footer {
         left: 40px;
@@ -258,9 +279,6 @@ hr {
     }
     .logo__instagram img{
         width: 70px;
-    }
-    .footer {
-        height: 230px;
     }
     .footer ul{
         margin-top: 40px;
@@ -281,6 +299,7 @@ hr {
     .logo_container {
         display: block;
         margin: 0;
+        margin-top: 10px;
     }
     .burguer_menu{
         display: none;
@@ -308,7 +327,7 @@ hr {
         font-size: 30px;
     }
     .back__header {
-        height: 162px;
+        height: 170px;
     }
     .slider__ubication { 
         top: -193px;     
@@ -325,6 +344,12 @@ hr {
     .slider {
         grid-template-columns: repeat(3, 1fr);
     }
+    .logo__footer {
+        left: 100px;
+    }
+    .logo__instagram {
+        right: 100px;
+    }
 }
 
 @media (min-width: 1250px) {
@@ -333,6 +358,21 @@ hr {
     }
     .slider {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .logo__footer {
+        left: 160px;
+    }
+    .logo__instagram {
+        right: 160px;
+    }
+    .footer ul{
+        margin-top: 20px;
+    }
+    .footer ul li{
+        font-size: 30px;
+    }
+    .ul__li:first-child{
+        font-size: 45px;
     }
 }
 
