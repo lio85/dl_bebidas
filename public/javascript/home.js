@@ -202,7 +202,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
         }  */
     })
     .catch(function(e){
-        alert("Error!");
+        alert("Error pituco!");
     })
 
 
