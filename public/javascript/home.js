@@ -16,7 +16,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
         return response.json();
     })
     .then(function(data_decode){
-
+        alert("bienvenido")
         /* const {aperitivos, cervezas, gaseosas, vinos, whiskeys}= data_decode
         const left_arrows= document.querySelectorAll('.fa-chevron-left')
         const right_arrows= document.querySelectorAll('.fa-chevron-right')
