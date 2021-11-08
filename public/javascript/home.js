@@ -17,7 +17,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
     })
     .then(function(data_decode){
 
-        const {aperitivos, cervezas, gaseosas, vinos, whiskeys}= data_decode
+        /* const {aperitivos, cervezas, gaseosas, vinos, whiskeys}= data_decode
         const left_arrows= document.querySelectorAll('.fa-chevron-left')
         const right_arrows= document.querySelectorAll('.fa-chevron-right')
         const sliderContainers= [...document.querySelectorAll('.slider')];
@@ -199,7 +199,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
                         break;
                 }
             };
-        } 
+        }  */
     })
     .catch(function(e){
         alert("Error!");
