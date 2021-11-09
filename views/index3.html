@@ -7,21 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="nombre"></h1>
+    <!-- <h1 class="nombre"></h1> -->
     <h1 class="edad"></h1>
+    <p class="nombre"></p>
     
     <script>
-        //fetch("http://localhost:3070/api/prueba")
-        fetch("http://dl-bebidas-dashboard.herokuapp.com/api/prueba")
+        fetch("https://api.giphy.com/v1/gifs/search?api_key=kr7EQC1QkOQJTzp0fv8tEMc7AE0B0hRr&q=gol&limit=5&offset=0&rating=g&lang=en")
+        //fetch("http://dl-bebidas-dashboard.herokuapp.com/api/prueba")
             .then(function(response){
                 return response.json();
             })
             .then(function(data){
-                console.log(data);
+                console.log(data[0].title);
                 const nombre= document.querySelector(".nombre")
-                nombre.innerText= data.nombre;
+                nombre.innerText= data;
                 const edad= document.querySelector(".edad")
-                edad.innerText= data.edad;
+                //edad.innerText= data.edad;
             
             })
             .catch(function(e){
