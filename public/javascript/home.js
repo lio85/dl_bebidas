@@ -11,7 +11,7 @@ for (let i=0; i< items__nav.length; i++){
     });
 };
 
-fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
+fetch("http://dl-bebidas-dashboard.herokapp.com/api/productsbycategory")
     .then(function(response){
         return response.json();
     })
@@ -201,8 +201,7 @@ fetch("http://dl-bebidas-dashboard.herokuapp.com/api/productsbycategory")
         } 
     })
     .catch(function(e){
-        console.log(e);
-        alert("Error!");
+        alert(e);
     })
 
 
