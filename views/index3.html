@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="nombre"></h1>
+    <h1 class="edad"></h1>
+    
+    <script>
+        fetch("http://localhost:3070/api/prueba")
+        //fetch("http://dl-bebidas-dashboard.herokuapp.com/api/prueba")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                console.log(data);
+                const nombre= document.querySelector(".nombre")
+                nombre.innerText= data.nombre;
+                const edad= document.querySelector(".edad")
+                edad.innerText= data.edad;
+            
+            })
+            .catch(function(e){
+                alert("Lo siento!");
+            })
+
+
+
+    </script>
+</body>
+</html>
